@@ -142,22 +142,13 @@ Always assigned to a host and is ghosted from the start.<br>
 
 ## Impostor
 
-### BountyHunter
+### Bounty Hunter
 
 Team : Impostors<br>
 Basis : Impostor<br>
 
-If the BountyHunters kill their designated target, their next kill cooldown will be much less than usual.<br>
-Killing a player except their current target results in an increased kill cooldown.<br>
-The target swaps after a configurable amount of time.<br>
+The Bounty Hunter is an Impostor with assigned bountys. Kill the bounty for a short cooldown, kill anyone else for a long cooldown.<br>
 
-#### Game Options
-
-| Name                                     |
-| ---------------------------------------- |
-| Time To Swap Bounty(s)                   |
-| Kill Cooldown After Killing Bounty(s)    |
-| Kill Cooldown After Killing Others(s)    |
 
 ### Camouflager
 
@@ -166,25 +157,18 @@ Basis : Shapeshifter<br>
 
 The Camouflager is an Impostor who can have every player shift into the chosen player for a limited time.
 
-### FireWorks
+### Fireworker
 
 Create and idea by こう。<br>
 
 Team : Impostors<br>
 Basis : Shapeshifter<br>
 
-The FireWorks can set off fireworks and kill all at once. <br>
+The Fireworker can set off fireworks and kill all at once. <br>
 They can put a few fireworks by Shapeshift. <br>
 After they put all the fireworks and after the other impostors are all gone, they can ignite all fireworks at once by Shapeshift. <br>
 They can perform kills after setting off fireworks. <br>
 Even if they mistakenly bomb themselves, killing everyone results in Impostor win. <br>
-
-#### Game Options
-
-| Name                |
-| ------------------- |
-| FireWorks Max Count |
-| FireWorks Radius    |
 
 ### Mare
 
@@ -197,18 +181,13 @@ Basis : Impostor<br>
 They can kill only in lights out, but next kill cooldown will be half.<br>
 While lights out they can move faster, and yet their name looks red by everyone.<br>
 
-#### Game Options
-
-| Name                            |
-| ------------------------------- |
-| Mare Player Speed In Lights Out |
 
 ### Puppeteer
 
 Team : Impostors<br>
 Basis : Impostor<br>
 
-The puppeteer can curse a crewmate and force them to kill the next non-impostor they come near.<br>
+The Puppeteer can curse a crewmate and force them to kill the next non-impostor they come near.<br>
 The cursed crewmate can kill a mad role also.<br>
 It is not possible for puppeteer to perform a normal kill.<br>
 
@@ -220,31 +199,14 @@ Basis : Shapeshifter<br>
 The Mercenary has a shorter kill cooldown.<br>
 Unless they get a kill by deadline, they suicide instantly.<br>
 
-#### Game Options
+### Shapeshifter
 
-| Name                          |
-| ----------------------------- |
-| Mercenary Kill Cooldown(s)    |
-| Time Limit To Suiside(s)      |
-
-### ShapeMaster
-
-**Warning**
-Unavailable.
-
-Create and idea by しゅー<br>
+Create and idea by Innersloth<br>
 
 Team : Impostors<br>
-Basis : ShapeShifter<br>
+Basis : Shapeshifter<br>
 
-The ShapeMasters have no Shapeshift cooldown.<br>
-On the other hand, their default Shapeshift duration is shorter (default: 10s).<br>
-
-#### Game Options
-
-| Name                   |
-| ---------------------- |
-| Shapeshift Duration(s) |
+It's just a vanilla Shapeshifter.<br>
 
 ### Sniper
 
@@ -263,14 +225,7 @@ Precise Shooting:OFF<BR>
 Precise Shooting:ON<BR>
 ![on](https://user-images.githubusercontent.com/96226646/167415233-97882c76-fcde-4bac-8fdd-1641e43e6efe.png)<BR>
 
-#### Game Options
-
-| Name                    |
-| ----------------------- |
-| Sniper Bullet Count     |
-| Sniper Precise Shooting |
-
-### TimeThief
+### Time Thief
 
 Created by integral, しゅー, そうくん, ゆりの<br>
 Idea by みぃー<br>
@@ -281,13 +236,6 @@ Basis : Impostor<br>
 Every kill cuts down discussion and voting time in meeting.<br>
 Depending on option, the lost time is returned after they die.<br>
 
-#### Game Options
-
-| Name                              |
-| --------------------------------- |
-| TimeThief Decrease Time Length(s) |
-| Lower Limit For Voting Time(s)    |
-| Return Stolen Time After Death    |
 
 ### Vampire
 
@@ -295,13 +243,8 @@ Team : Impostors<br>
 Basis : Impostor<br>
 
 When the vampire kills, the kill is delayed (the bitten player will die in a set time based on settings or when the next meeting is called).<br>
-If the vampire butes [Bait](#Bait), the player will die immediately and a self-report will be forced.<br>
+If the vampire bites [Bait](#Bait), the player will die immediately and a self-report will be forced.<br>
 
-#### Game Options
-
-| Name                  |
-| --------------------- |
-| Vampire Kill Delay(s) |
 
 ### Warlock
 
@@ -313,13 +256,13 @@ The next time the warlock shifts, the cursed player will kill the nearest person
 If you shapeshift as Warlock, you can make a regular kill. <br>
 Beware, if you or another impostor are the nearest to the player you have cursed when you shift you will be killed.<br>
 
-### Witch
+### Spellcaster
 
 Team : Impostors<br>
 Basis : Impostor<br>
 
-The Witches can perform kills or spells by turns.<br>
-The players spelled by Witches before a meeting are marked "cross" in the meeting, and unless exiling Witches, They all die just after the meeting.<br>
+The Spellcaster can perform kills or spells by turns.<br>
+The players spelled by a Spellcaster before a meeting are marked with a cross in the meeting, and unless exiling the Spellcaster, They all die just after the meeting.<br>
 
 ### Mafia
 
@@ -338,14 +281,14 @@ The Silencer's first kill attempt will silence the crewmate inside the next meet
 After the Silence, the Silencer is a regular Impostor until the next meeting.<br>
 After the next meeting, the process restarts and they can silence again.<br>
   
-### Traitor
+### Corrupted Sheriff
 
 Team : Impostors<br>
 Basis : Impostor<br>
 
-Traitor spawns when all Impostors die by kill or vote.<br>
-As soon as all Impostors die, the [Sheriff](#sheriff) or [Investigator](#investigator) turns into the Traitor.<br>
-Traitor is a regular impostor with nothing new.<br>
+Corrupted Sheriff spawns when all Impostors die by kill or vote.<br>
+As soon as all Impostors die, the [Sheriff](#sheriff) turns into the Corrupted Sheriff.<br>
+Corrupted Sheriff is a regular impostor with nothing new.<br>
 
 ### Miner
 
@@ -376,13 +319,12 @@ Basis : Impostor<br>
 The Pickpocket is an Impostor who steals the votes of players they kill.<br>
 These votes stack up, which can make the Pickpocket very powerful.<br>
 
-### Cleaner
+### Janitor
 
 Team : Impostors<br>
 Basis : Impostor<br>
 
-The Cleaner is an Impostor who can use their report button to clean bodies, making them unreportable.<br>
-Players with the mod will not see the cleaned body.<br>
+The Janitor is an Impostor who can use their report button to clean bodies, making them unreportable.<br>
 
 ### Freezer
 
@@ -391,18 +333,43 @@ Basis : Shapeshifter<br>
 
 The Freezer is an Impostor who can shapeshift into a player to freeze them in place for a set amount of time.<br>
 
+### Identity Thief
+
+Team : Impostors<br>
+Basis : Impostor<br>
+
+The Identity Thief is an impostor that steals the appearance of who they kill.<br>
+
+### Manipulator
+
+Team : Impostors<br>
+Basis : Impostor<br>
+
+The Manipulator is an impostor that sabotages meetings using regular sabotages.<br>
+
+### Swooper
+
+Team : Impostors<br>
+Basis : Impostor<br>
+
+The Swooper is an Impostor that can vent to temporarily turn invisible.<br>
+
+### Trickster
+
+Create and idea by Loonie<br>
+  
+Team : Impostors<br>
+Basis : Impostor<br>
+
+The Trickster is an Impostor that cannot vent, but appears innocent to Investigator.<br>
+The Sheriff misfires. Snitch cannot find the Trickster.<br>
+
 ## Madmate
 
 There are common options for Madmates.
 #### Game Options
 
-| Name                          |
-| ----------------------------- |
-| Madmates Can Fix Lights Out   |
-| Madmates Can Fix Comms        |
-| Madmates Have Impostor Vision |
-| Madmates Vent Cooldown        |
-| Madmates Max Time In Vents    |
+
 
 ### Madmate
 
@@ -423,11 +390,6 @@ Basis : Crewmate<br>
 The MadGuardians belong to team Impostors, one type of Madmates.<br>
 Compared with Madmates, MadGuardian cannot use vents, while they can guard kills by Impostors after finishing all tasks.<br>
 
-#### Game Options
-
-| Name                                  |
-| ------------------------------------- |
-| MadGuardian Can See Who Tried To Kill |
 
 ### MadSnitch
 
@@ -440,13 +402,6 @@ The MadSnitches belong to team Impostors, one type of Madmates.<br>
 They can see who is the Impostor after finishing all their tasks.<br>
 Depending on option, they can use vents.<br>
 
-#### Game Options
-
-| Name                   |
-| ---------------------- |
-| MadSnitch Can Use Vent |
-| MadSnitch Tasks        |
-
 ### Parasite
 
 Team : Impostors<br>
@@ -454,9 +409,7 @@ Basis : Shapeshifter
 
 The Parasite is the only Madmate role with the ability to kill.<br>
 Impostors do not know the Parasite.<br>
-Parasites can shapeshift, kill, and vent.<br>
-Due to limitations, whether Parasite knows the Impostors varies.<br>
-The intended design was that they didn't know.<br>
+Parasites can kill and vent.<br>
 
 ### SidekickMadmate
 
@@ -471,6 +424,37 @@ Some kind of Shapeshifter-based Impostors can give SidekickMadmate by Shapeshift
 **NOTE:**
 - The **"nearest"** Crewmate becomes SidekickMadmate no matter to whom the Impostors Shapeshift.
 
+## Agent
+  
+Create and idea by Loonie<br>
+  
+Team : Impostors<br>
+Basis : Crewmate<br>
+  
+The Agent is a madmate role the Impostors can see.<br>
+Agent is 1 of 2 roles that are known to the Impostors.<br>
+  
+## Saboteur
+  
+Create and idea by Loonie<br>
+  
+Team : Impostors<br>
+Basis : Impostor<br>
+  
+The Saboteur is a madmate that can sabotage.
+  
+## Consigliere
+  
+Create and idea by Loonie<br>
+  
+Team : Impostors<br>
+Basis : Impostor<br>
+  
+The Consigliere is a madmate role that can find the alignment of others using their kill button.<br>
+- Red = Impostors, Madmates<br>
+- Cyan = Crewmates<br>
+- Gray = Neutrals<br>
+= Purple = Coven<br>
 
 ## Impostor/Crewmate
 
@@ -485,15 +469,7 @@ If you can guess target's role during meeting, you can kill the target.<br>
 In addition, Evil Guesser has a chance to kill even after being exiled.<br>
 There is also a neutral Guesser called Pirate. Their goal is guess a number of people to succesfully win.<br>
 
-#### Game Options
 
-| Name                                   |
-| -------------------------------------- |
-|           EvilGuesser Chance           |
-|         Number of Evil Guesser         |
-|    Arrow to shoot as Normal Crewmate   |
-|           Guesser shoot limit          |
-| Can kill multiple times during meeting |
 
 #### Guesser Commands
 
@@ -523,10 +499,7 @@ Basis : Scientist<br>
 The doctor can see when Crewmates die using vitals anywhere in the map.<br>
 By closing the chat, the doctor can see the dead players cause of death next to their name in all meetings.<br>
 
-#### Game Options
-| Name                    |
-| ----------------------- |
-| Doctor Battery Duration |
+
 
 ### Lighter
 
@@ -535,12 +508,7 @@ Basis : Crewmate<br>
 
 After finishing all the task, The lighters have their vision expanded and ignore lights out.<br>
 
-#### Game Options
 
-| Name                          |
-| ----------------------------- |
-| Lighter Expanded Vision       |
-| Lighter Gains Impostor Vision |
 
 ### Mayor
 
@@ -550,36 +518,7 @@ Basis : Crewmate or Engineer<br>
 The Mayors' votes count twice or more.<br>
 Depending on the options, they can call emergency meeting by entering vents.<br>
 
-#### Game Options
 
-| Name                              |
-| --------------------------------- |
-| Mayor Additional Votes Count      |
-| Mayor Has Mobile Emergency Button |
-| Number Of Mobile Emergency Button |
-
-### SabotageMaster
-
-Create and idea by 空き瓶/EmptyBottle<br>
-
-Team : Crewmates<br>
-Basis : Crewmate<br>
-
-The SabotageMasters can fix sabotage faster.<br>
-they can fix both of Comms in MIRA HQ, Reactor and O2 by fixing either.<br>
-Lights can be fixed by touching a single lever.<br>
-Opening a door in Polus or The Airship will open all the linked doors.<br>
-
-#### Game Options
-
-| Name                                                   |
-| ------------------------------------------------------ |
-| SabotageMaster Fix Ability Limit(Except Opening Doors) |
-| SabotageMaster Can Open Multiple Doors                 |
-| SabotageMaster Can Fix Both Reactors                   |
-| SabotageMaster Can Fix Both O2                         |
-| SabotageMaster Can Fix Both Comms In MIRA HQ           |
-| SabotageMaster Can Fix Lights Out All At Once          |
 
 ### Sheriff
 
@@ -593,19 +532,7 @@ Killing Crewmates will result in suicide. <br>
 
 * As a measure against blackout, after death, the Sheriff can only see the motion of committing suicide at each meeting. There is no corpse. <br>
 
-#### Game Options
 
-| Name                                                              |
-| ----------------------------------------------------------------- |
-| Sheriff Can Kill [Arsonist](#arsonist)                            |
-| Sheriff Can Kill [Jester](#jester)                                |
-| Sheriff Can Kill [Terrorist](#terrorist)                          |
-| Sheriff Can Kill [Opportunist](#opportunist)                      |
-| Sheriff Can Kill Madmates                                         |
-| Sheriff Can Kill [Egoist](#egoist)                                |
-| Sheriff Can Kill [SchrodingerCat](#schrodingercat) In Team Egoist |
-| Sheriff Can Kill Crewmates As It                                  |
-| Sheriff Shot Limit                                                |
 
 ### Snitch
 
@@ -617,14 +544,7 @@ Dependent on the settings, the snitch may also see arrows pointed in the remaini
 When the snitch has 0 or 1 tasks remaining, the impostors will be able to see a star next to the name of the snitch and that there is an alive snitch who has 0 or 1 tasks left.<br>
 The impostors also see an arrow pointed in the snitch's direction when the snitch has one or less tasks remaining.<br>
 
-#### Game Options
 
-| Name                           |
-| ------------------------------ |
-| Snitch Can See Target Arrow    |
-| Snitch Can See Colored Arrow   |
-| Snitch Can Find Neutral Killer |
-| Snitch Can Find Coven          |
 
 ### SpeedBooster
 
@@ -635,28 +555,8 @@ Basis : Crewmate<br>
 
 Finishing all the tasks boosts the player speed of someone alive.<br>
 
-#### Game Options
 
-| Name                 |
-| -------------------- |
-| Boosted Player Speed |J
 
-### Trapper
-
-Created by そうくん<br>
-Original idea by 宿主ランニング<br>
-
-Team : Crewmates<br>
-Basis : Crewmate<br>
-
-When killed, the trapper will hold the killer in place.<br>
-The time held in place on the body is decided by host in settings.<br>
-
-#### Game Options
-
-| Name            |
-| --------------- |
-| Freeze Duration |
 
 ### Child
 
@@ -667,11 +567,7 @@ Team & Basis: Crewmates<br>
 
 When the Child dies by any matter, the Child Wins.<br>
 
-#### Game Options
 
-| Name           |
-| -------------- |
-| Child Is Known |
 
 ### Bastion
 
@@ -697,11 +593,7 @@ Basis : Crewmate<br>
 When a killer kills the Demolitionist, they have a few seconds to go hide and vent, or else they will die with the Suicide Death Reason.<br>
 The time is configurable. You will know when you are bombed when you see an arsonist triangle by your name.<br>
 
-#### Game Options
 
-| Setting Name    |
-| --------------- |
-| Suicide Time    |
   
 ### Investigator
 
@@ -715,19 +607,7 @@ The Host can choose if neutrals appear red.<br>
 
 * As a measure against blackout, after death, the Investigator can only see the motion of committing suicide at each meeting. There is no corpse. <br>
 
-#### Game Options
 
-| Name                                                              |
-| ----------------------------------------------------------------- |
-| Neutral Benigns Appear Red                                        |
-| Neutral Evils Appear Red                                          |
-| Neutral Killings Appear Red                                       |
-| Crewmate Killings appear Red                                      |
-| Investigate Cooldown                                              |
-| Madmates Appear Red                                               |
-| Coven Is Purple                                                   |
-| Child appears Red                                                 |
-| Terrorist Appears Red                                             |
 
 ### Veteran
 
@@ -740,15 +620,7 @@ Basis: Engineer
 The Veteran can vent to go on Alert.<br>
 While Veteran is on alert, any killing role that tries to use their kill button on Veteran, crew roles too if turned on, will make the Veteran lunge to kill.<br>
 
-#### Game Options
 
-| Name                                   |
-| ----------------                       |
-| Alert Cooldown                         |
-| Alert Duration                         |
-| Number of Alerts                       |
-| Vet Crew Roles                         |
-| What Happens if Pestilence Attacks Vet |
 
 ### Psychic
 
@@ -758,16 +630,7 @@ Basis : Crewmate<br>
 The Psychic is a crewmate with the ability to see potential evils during a meeting.<br>
 Three players are chosen to be highlighted in red, at least one of them are evil.<br>
 
-#### Game Options
 
-| Name                          |
-| ----------------------------- |
-| Crew Killing are Red          |
-| Neutral Benign are Red        |
-| Neutral Evil are Red          |
-| Madmate is Red                |
-| GA Depends On Target Role     |
-| Exe Target Shows Evil         |
 
 ### Mystic
 
@@ -776,14 +639,31 @@ Basis : Crewmate<br>
 
 The Mystic is a crewmate who can sense kills that occur and when.<br>
 When a kill occurs, the Mystic gets a flash.<br>
+  
+### Detective
+
+Create and idea by Loonie<br>
+  
+Team : Crewmates<br>
+Basis : Crewmate<br>
+  
+The Detective is a crewmate with additional info in their reports.<br>
+When reporting a body, they will learn the role of the killer AND the role of the body they report.<br>
+Optionally, Detective may have arrows.<br>
+  
+### Ironclad
+  
+Create and idea by Loonie<br>
+  
+Team : Crewmates<br>
+Basis : Crewmate<br>
+
+The Ironclad is a crewmate that becomes immortal on task completion.<br>
+Optionally, the Ironclad can see who attacks them.<br>
 
 ## Neutral
 
-#### Settings
 
-| Settings Name   |
-| --------------- |
-| Block Move Time |
 
 ### Arsonist
 
@@ -797,12 +677,7 @@ To douse, you must stand next to a player after pressing kill until the orange t
 
 * As a measure against blackout, after death, the Arsonist can only see the motion of committing suicide at each meeting. There is no corpse. <br>
 
-#### Game Options
 
-| Name                    |
-| ----------------------- |
-| Arsonist Douse Duration |
-| Arsonist Douse Cooldown |
 
 ### PlagueBearer
 
@@ -817,35 +692,24 @@ After infecting everyone, you turn into Pestilence.
 
 * As a measure against blackout, after death, the Plaguebearer can only see the motion of committing suicide at each meeting. There is no corpse. <br>
 
-#### Game Options
 
-| Name                    |
-| ----------------------- |
-| PlagueeBearer Infect CD |
 
-### Serial Killer
+### Jackal
 
 Team: Neutral<br>
 Basis: Impostor<br>
-Victory Condition: Kill Everyone<br>
+Victory Condition: Kill everyone<br>
 
-The Serial Killer can kill both impostors and crewmates.<br>
+The Jackal can kill both impostors and crewmates.<br>
 Their goal is to be the last one standing.<br>
 
-#### Game Options
 
-| Name                    |
-| ----------------------- |
-| SK Kill Cooldown        |
-| SK Can Vent             |
-| SK Can Sabotage         |
-| SK Has Sidekick         |
 
 ### Pestilence
 
 Team : Neutral<br>
 Basis : Impostor<br>
-Victory Condition : Kill all Living Player<br>
+Victory Condition : Kill all living players<br>
 
 PlagueBearer becomes Pestilence when they finish infecting.<br>
 Pestilence is an unkillable force. When someone tries to kill Pestilence, the pestilence will kill with a lunge. Pestilence can only be voted.<br>
@@ -853,12 +717,7 @@ However, if Pestilence is killed by an un-direct source, such as Warlock and Pup
 
 * As a measure against blackout, after death, the Pestilence can only see the motion of committing suicide at each meeting. There is no corpse. <br>
 
-#### Game Options
 
-| Name                    |
-| ----------------------- |
-| Pesti Kill Cooldown     |
-| Pestilence Can Vent     |
 
 ### Vulture
 
@@ -870,11 +729,7 @@ The Vulture can use their report button to eat the body. Making it unreportable.
 You can still see it though due to techincal limitations.<br>
 You can change how many bodies they have to eat.<br>
 
-#### Game Options
 
-| Name                    |
-| ----------------------- |
-| Body Amount             |
 
 ### The Glitch
 
@@ -886,13 +741,7 @@ After every meeting, they are on killing mode.<br>
 Once they vent, they are on hacking mode.<br>
 Hack someone to prevent them from reporting, sabotaging, killing, and venting if turned on.<br>
 
-#### Game Options
 
-| Name                    |
-| ----------------------- |
-| Kill Cooldown           |
-| Hack Cooldown           |
-| Hack Prevents Vent      |
 
 ### Werewolf
 
@@ -903,14 +752,7 @@ The Werewolf can vent to activate their rampage.<br>
 They can only kill during a rampage.<br>
 This requires tweaking until you get it right.<br>
 
-#### Game Options
 
-| Name                    |
-| ----------------------- |
-| Rampage Cooldown        |
-| Rampage Duration        |
-| Can Vent While Rampaged |
-| Kill Cooldown.          |
 
 ### Guardian Angel
 
@@ -920,15 +762,7 @@ Basis : Engineer<br>
 The Guardian Angel can vent to temportarily prevent their target from being killed.<br>
 If their target wins, so does the Guardian Angel.<br>
 
-#### Game Options
 
-| Name                        |
-| --------------------------- |
-| Protect Cooldown            |
-| Protect Duration            |
-| Number of Protects          |
-| GA Knows Target's Role      |
-| Target Knows They have a GA |
 
 ### Amnesiac
 
@@ -964,11 +798,7 @@ Egoist win means Impostor lose and vice versa.<br>
 2. Impostor win with some Impostors remained.<br>
 3. Crewmate or other Neutral win.<br>
 
-#### Settings
 
-| Settings Name       |
-| ------------------- |
-| Egoist KillCooldown |
 
 ### Executioner
 
@@ -981,13 +811,7 @@ Executioner’s target is is marked with a diamond which only they can see.<br>
 If the executioner’s target is voted off, they win alone.<br>
 If the target is a [Jester](#jester), they will win an additional victory with the executioner.<br>
 
-#### Game Options
 
-| Name                            |
-| ------------------------------- |
-| Executioner Can Target Impostor |
-| Executioner Can Target Neutral  |
-| Role After Target Dies          |
 
 ### Jester
 
@@ -1020,12 +844,7 @@ The SchrodingerCats have no tasks and by default, no victory condition. Only aft
 4. If exiled, they die with the victory condition same as before.<br>
 5. If killed with special abilities of Impostors (except for [Vampire](#vampire)), they die with the victory condition same as before.<br>
 
-#### Game Options
 
-| Name                                             |
-| ------------------------------------------------ |
-| SchrodingerCat In No Team Can Win With Crewmates |
-| Team To Change After Exiled                      |
 
 ### Terrorist
 
@@ -1047,13 +866,7 @@ Basis : Impostor<br>
 The Juggernaut starts from the starting kill cooldown.<br>
 However, with every kill, their next kill cooldown decreases by the chosen amount.<br>
 
-#### Game Options
 
-| Name                        |
-| --------------------------- |
-| Starting Kill Cooldown      |
-| Decrease Amount             |
-| Juggernaut can Vent         |
 
 ### Hacker
 
@@ -1068,11 +881,7 @@ They reach these points by sabotages.<br>
 When a Sabotage is called, and/or the Hacker fixes it, the Hacker gains a point.<br>
 Reach the required amount of points to win.<br>
 
-#### Game Options
 
-| Name                 |
-| -------------------- |
-| Points Amount        |
 
 ### Marksman
 
@@ -1083,11 +892,7 @@ Basis : Impostor<br>
 
 The Marksman gets a longer kill distance for each kill they make.<br>
 
-#### Game Options
 
-| Name                       |
-| -------------------------- |
-| Marksman Kill Cooldown     |
 
 ### Crewpostor
 
@@ -1127,6 +932,102 @@ Victory Conditions : Survive to the end<br>
 The Hitman is a neutral benign role with the ability to kill.<br>
 Hitman can win with anyone and does not count as a killer.<br>
 Optionally, Hitman can also win with roles like Jester and Executioner.<br>
+  
+### Masochist
+  
+Create and idea by Loonie<br>
+  
+Team : Neutral<br>
+Basis : Crewmate<br>
+Victory Condition : Get attacked a certain amount of times to win<br>
+  
+The Masochist is a neutral evil who must be attacked a set amount of times to win.<br>
+Because of this, the Masochist is pratically unkillable.<br>
+  
+### Poisoner
+
+
+Create and idea by Loonie<br>
+  
+Team : Neutral<br>
+Basis : Impostor<br>
+Victory Condition : Kill everyone<br>
+
+The Poisoner is a neutral killer with delayed kills.<br>
+Kill everyone to win<br>
+  
+### Serial Killer
+
+Create and idea by Loonie<br>
+  
+Team : Neutral<br>
+Basis : Impostor<br>
+Victory Condition : Kill everyone<br>
+
+The Serial Killer is a neutral killer that can sabotage.<br>
+Optionally, the Serial Killer can guess roles like a guesser.<br>
+
+### Predator
+
+Create and idea by Loonie<br>
+  
+Team : Neutral<br>
+Basis : Impostor<br>
+Victory Condition : Kill enough players to win.<br>
+
+The Predator is a killing role not counted to the game.<br>
+They cannot vent but have a set goal of killing a certain amount of players to win.<br>
+If they don't kill enough, they lose.<br>
+
+### Vindicator
+
+Create and idea by Loonie<br>
+  
+Team : Neutral<br>
+Basis : Impostor<br>
+Victory Condition : Kill everyone<br>
+
+The Vindicator is a neutral killer with extra votes, like a Mayor.<br>
+Kill everyone to win.<br>
+
+### Traitor
+
+Create and idea by Loonie<br>
+  
+Team : Neutral<br>
+Basis : Impostor<br>
+Victory Condition : Kill everyone<br>
+
+The Traitor is a neutral impostor that must kill literally everyone.<br>
+The Traitor will not win if the game is 1 Traitor and 1 Crewmate.<br>
+The Traitor must kill that crewmate to win.<br>
+The Traitor has every ability a regular Impostor has, due to its lore being a former Impostor.<br>
+
+### Wraith
+
+Create and idea by Loonie<br>
+  
+Team : Neutral<br>
+Basis : Impostor<br>
+Victory Condition : Kill everyone<br>
+
+The Wraith is a neutral killer that cannot report bodies, call emergency meetings, or cast a vote.<br>
+However, they can sabotage doors.<br>
+Along with that, since they are a ghost-like creature, they show up as innocent to crew roles and can't be found by the Detective.<br>
+
+### Glitch
+
+Create and idea by Loonie<br>
+  
+Team : Neutral<br>
+Basis : Impostor<br>
+Victory Condition : Kill everyone<br>
+
+The Glitch is a neutral killer that must kill literally everyone to win.<br>
+If the last two players are a Glitch and Crewmate, the game will NOT end.<br>
+The Glitch must kill that crewmate.<br>
+Glitch cannot vent, but can sabotage.<br>
+Glitch also corrupts its kills, preventing roles from being found.<br>
 
 ## Coven
 
@@ -1137,9 +1038,7 @@ Basis : Impostor<br>
 
 The Coven Leader is essentially [Puppeteer](#puppeteer) until the possession of the Necronomicon, where they kill normally afterwards.<br>
 
-| Name                       |
-| -------------------------- |
-| CL Taglock Cooldown        |
+
 
 ### Medusa
 
@@ -1149,9 +1048,7 @@ Basis : Impostor<br>
 The Medusa is essentially an evil [Veteran](#veteran).<br>
 Bodies will become unreportable after a certain amount of time.<br>
 
-| Name                       |
-| -------------------------- |
-| Stone Gaze Cooldown        |
+
 
 ### Hex Master
 
@@ -1162,9 +1059,7 @@ The Hex Master hexes players. They switch between killing and hexing.<br>
 Once all living non-Coven players are hexed, they must eject the Hex Master or the Coven wins.<br>
 With the Necronomicon, the Hex Master can kill normally every time.<br>
 
-| Name                       |
-| -------------------------- |
-| HM Hex Cooldown            |
+
 
 ## Modifiers
 
@@ -1250,11 +1145,93 @@ Assigned To: Crewmates<br>
 
 The Diseased is a crewmate modifier which multiplies the killer's kill cooldown upon killing the Diseased.
 
-#### Game Options
+### Overclocked
 
-| Name              |
-| ----------------- |
-| Kill Multiplier   |
+Create and idea by Loonie<br>
+  
+Assigned To: Killers<br>
+
+The Overclocked is a killer-only modifier that modifies the kill cooldown of the assigned player.<br>
+
+### Quick Fix
+
+Create and idea by Loonie<br>
+  
+Assigned To: Crewmates<br>
+
+The Quick Fix is a crew modifier that allows the player to fix sabotages quickly.<br>
+
+### Sticky
+
+Create and idea by Loonie<br>
+  
+Assigned To: All<br>
+
+The Sticky is a modifier that, when killed, locks the killer in place for a bit.<br>
+
+### Amplify
+
+Create and idea by Loonie<br>
+  
+Assigned To: All<br>
+
+The Amplify is a modifier that grants the player one extra vote.<br>
+Roles that modify their votes cannot recieve this modifier.<br>
+
+### Eternal
+
+Create and idea by Loonie<br>
+  
+Assigned To: Crewmates and Impostors<br>
+
+The Eternal is a modifier only assigned to crewmate-aligned and impostor-aligned players.<br>
+The modifier prevents the game from ending as long as the Eternal is alive.<br>
+This includes being the only player alive.<br>
+
+### Blind
+
+Create and idea by InfWorks<br>
+  
+Assigned To: All<br>
+
+The Blind is a modifier that sets the vision of the assigned player to 0.1x.
+
+### Undercover
+
+Create and idea by Loonie<br>
+  
+Assigned To: Crewmates and Neutrals<br>
+
+The Undercover is a modifier only assigned to crew-aligned and neutral-aligned players.<br>
+As the Undercover, you win with the Impostors.<br>
+
+### Insight / Outsight
+
+
+
+Create and idea by Loonie<br>
+  
+Assigned To: Crewmates / Impostors<br>
+
+Insight: Insight is a crew modifier that gives the crewmate the same vision as the Impostors.
+Outsight: Outsight is an impostor modifier that gives the impostor the same vision as the crew.
+
+### Forensic
+
+Create and idea by Loonie<br>
+  
+Assigned To: All except Doc and Trickster<br>
+
+The Forensic is a modifier that allows the assigned player to see death causes like a Doctor.<br>
+
+### Tethered
+
+Create and idea by Loonie<br>
+  
+Assigned To: Impostors<br>
+
+The Tethered is a modifier that disables the ability to vent for the assigned impostor.<br>
+
 
 
 ## Attribute
