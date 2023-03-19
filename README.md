@@ -4,7 +4,7 @@
 
 This mod is not affiliated with Among Us or Innersloth LLC, Town Of Host, Town Of Host: The Other Roles, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC. © Innersloth LLC.
 
-DISCORD SERVER: https://discord.gg/ha6XBCCHAN --- Recommended after Innersloth introduced randomized lobby names
+DISCORD SERVER: None
 
 ## Releases
 
