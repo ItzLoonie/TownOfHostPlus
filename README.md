@@ -8,17 +8,15 @@ DISCORD SERVER: https://discord.gg/ha6XBCCHAN --- Recommended after Innersloth i
 
 ## Releases
 
-AmongUs Version: **2022.10.25s**<br>
-Semi-Support for: **2022.8.24**, **2022.9.20**<br>
-**Latest Version: [Here](https://github.com/music-discussion/TownOfHost-TheOtherRoles/releases/latest)**
+**Latest Version: [Here](https://github.com/SkullCreeper/TOHTOR-Edited/releases/latest)**
 
-Old Versions: [Here](https://github.com/music-discussion/TownOfHost-TheOtherRoles/releases)
+Old Versions: [Here](https://github.com/SkullCreeper/TOHTOR-Edited/releases)
 
 ## KNOWN BUGS
 
 KNOWN BUGS:
 
-- Lovers wins when they die
+- Lovers win when they die
 - Egoist cannot win
 - Manipulator meeting sabotage doesn't clear when sabotage ends
 - Identity Thief bans for hacking.
@@ -353,6 +351,14 @@ Team : Impostors<br>
 Basis : Impostor<br>
 
 The Swooper is an Impostor that can vent to temporarily turn invisible.<br>
+  
+  
+### Bomber
+
+Team : Impostors<br>
+Basis : Impostor<br>
+
+The Bomber is a buffed Puppeteer that makes their target die if they don't kill.<br>
 
 ### Trickster
 
@@ -365,11 +371,6 @@ The Trickster is an Impostor that cannot vent, but appears innocent to Investiga
 The Sheriff misfires. Snitch cannot find the Trickster.<br>
 
 ## Madmate
-
-There are common options for Madmates.
-#### Game Options
-
-
 
 ### Madmate
 
@@ -454,7 +455,7 @@ The Consigliere is a madmate role that can find the alignment of others using th
 - Red = Impostors, Madmates<br>
 - Cyan = Crewmates<br>
 - Gray = Neutrals<br>
-= Purple = Coven<br>
+- Purple = Coven<br>
 
 ## Impostor/Crewmate
 
@@ -544,7 +545,25 @@ Dependent on the settings, the snitch may also see arrows pointed in the remaini
 When the snitch has 0 or 1 tasks remaining, the impostors will be able to see a star next to the name of the snitch and that there is an alive snitch who has 0 or 1 tasks left.<br>
 The impostors also see an arrow pointed in the snitch's direction when the snitch has one or less tasks remaining.<br>
 
+### Engineer
 
+Create and idea by Innersloth<br>
+  
+Team : Crewmates<br>
+Basis : Engineer<br>
+
+Engineer from the base game.<br>
+
+### Spy
+
+Create and idea by Loonie<br>
+  
+Team : Crewmates<br>
+Basis : Engineer<br>
+  
+The Spy is a crewmate role with the vent ability and Impostor vision.<br>
+The catch? Impostors can see them with a red name.<br>
+Spy is 1 of 2 roles that can be seen by the Impostors.<br>
 
 ### SpeedBooster
 
@@ -1213,8 +1232,8 @@ Create and idea by Loonie<br>
   
 Assigned To: Crewmates / Impostors<br>
 
-Insight: Insight is a crew modifier that gives the crewmate the same vision as the Impostors.
-Outsight: Outsight is an impostor modifier that gives the impostor the same vision as the crew.
+Insight: Insight is a crew modifier that gives the crewmate the same vision as the Impostors.<br>
+Outsight: Outsight is an impostor modifier that gives the impostor the same vision as the crew.<br>
 
 ### Forensic
 
@@ -1462,8 +1481,4 @@ Roles from:
 9. Original [Town Of Host](https://github.com/tukasa0001/TownOfHost) (Mod itself plus pull requests for roles such as the guesser roles)
 
 ## Developers
-- [Discussions](https://github.com/music-discussion) ([YouTube](https://www.youtube.com/channel/UCAawAIWR5XfJE6T0JdYpzzg)) - Coding
-- [MC-AS-Huier](https://github.com/MC-AS-Huier) - SChinese Translations
-- [Tommy-XL](https://github.com/Tommy-XL) - Rus Translations
-- TheSkullCreeper#0001 - Art Direction
-- 단풍잎/ImaMapleTree - 12.8 Port Help
+- Loonie#0003 (Discord)
