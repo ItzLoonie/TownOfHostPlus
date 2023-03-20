@@ -11,7 +11,7 @@ It's very common that players will black screen when even one players disconnect
 Causes to why players disconnect like this are poor internet and/or bad hardware (common on mobile).<br>
 High ping is another likely cause, try to make sure players have reasonable ping (50 ms to 150 ms), especially for mobile.<br>
 
-DISCORD SERVER: None
+
 
 ## Releases
 
