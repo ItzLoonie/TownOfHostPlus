@@ -11,6 +11,60 @@ It's very common that players will black screen when even one players disconnect
 Causes to why players disconnect like this are poor internet and/or bad hardware (common on mobile).<br>
 High ping is another likely cause, try to make sure players have reasonable ping (50 ms to 150 ms), especially for mobile.<br>
 
+Along with this, don't use any role marked as broken.<br>
+They are marked this way due to a main function not working (eg Werewolf rampage, Veteran alerts, and bastion vents)
+
+## Changes, Fixes, and Additions
+### Changes
+- Witch renamed to Spellcaster so two roles don't share a name
+- FireWorks renamed to Fireworker for TOH accuracy
+- Morphling and Mechanic replaced with Shapeshifter and Engineer directly from vanilla
+- That scientist remake was removed
+- Sabotage Master is now a modifier
+- Trapster is now a modifier
+- All TOHTOR tags were removed (including the dev tags and gradient tags), and the code that handles server booster tags was removed
+- Friend code for Loonie (the dev) was removed from the default banned friend codes list
+- /winner is no longer host only and modified to be nicer
+- The original TOH role style is now the default mode
+- "Lovers Wins!" is now "Love Couple Wins!"
+- An exclamation mark was added to the end of the role winner text on the end screen
+- Serial Killer rename reverted back to Jackal
+- Impostor, Crewmate, and Jackal end screens now add the word Team to the start of the text
+- Added a space between schrodinger and cat in the role SchrodingerCat.
+- Oblivious now hides the report button for modded players rather than disabling it from lighting up
+- Jester can no longer get the Torch modifier due to it having the option for Impostor vision
+- Role sub text changed to sentence case as Discussions is unoriginal and made it title case like in Town of Us Reactivated
+- Terrorist color is now orange
+- Opportunist color is now a nice looking aqua color
+- Executioner color is now gray
+- Snitch partially recoded so Trickster can't be found by the Snitch (by design)
+- Sheriff not being able to kill for modded players when shot count is 0 fixed (re-added -1 as an option that does the same thing as 0, but it can kill)
+- /tag removed due to tags now being built in and also being minor
+- Code that prevents TOHTOR devs from being banned removed
+- Changed the modded options icon to the kill button so it feels more "vanilla"
+- Impostor and madmate color adjusted to match the vanilla color (#ff0000 -> #ff1313)
+- Crewmate roles now use the same color as a normal crewmate (opens up to more colors for neutrals and modifiers)
+
+### Fixes
+- Double cooldown bug fixed
+- Black screen after a meeting when a dead desynced impostor fixed
+- Roles are now displayed correctly when TOU styled roles is disabled  
+- Fade effect now matches the alignment color rather than the role you got
+- Witch win condition added (Discussions somehow forgot this?)
+
+### Additions
+- 15 new roles
+- 11 new modifiers, with some originally being roles
+- Trapster is now a modifier called Sticky
+- Sabotage Master is now a modifier called Quick Fix
+- Setting to disable the task counter for roles with tasks
+- Settings to disable the vent cleaning task, the waterwheels task on Polus, and the three waiting tasks (Reboot Wifi, Inspect Sample, and Run Diagnostics)
+- Parasite options for kill cooldown, venting, guessing and additional votes
+- Vanilla roles now have god dang descriptions when using /m instead of saying "Vanilla roles currently do not have descriptions."
+- Executioner target now appears on the alignment screen for Executioner, like Guardian Angel
+- Snitch option for revealing madmates, to make it harder for the Snitch and to make madmates a bit more useful
+- Arsonist and Plaguebearer now have options to have Impostor vision
+- Added a message for Pestilence in the Medium results
 
 
 ## Releases
@@ -38,6 +92,8 @@ KNOWN BUGS:
 - Werewolf cannot rampage
 - The Glitch cannot swap abilties correctly (replaced with a new role with a similar name)
 - Sometimes, impostors win when crewmates should when certain (unknown) conditions are met
+- Vampire and Poisoner die instantly to Demolitionist when the Demolitionist dies (Demolitionist is also marked as broken because of this)
+- Poisoner kills don't occur if Vampire is 0% (poison kills still go through when a meeting is started)
 
 ## Features
 
