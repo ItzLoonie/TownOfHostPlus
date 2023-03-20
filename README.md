@@ -30,6 +30,7 @@ KNOWN BUGS:
 - Corrupted Sheriff prevents roles from killing impostors
 - Werewolf cannot rampage
 - The Glitch cannot swap abilties correctly (replaced with a new role with a similar name)
+- Sometimes, impostors win when crewmates should when certain (unknown) conditions are met
 
 ## Features
 
