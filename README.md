@@ -4,6 +4,13 @@
 
 This mod is not affiliated with Among Us or Innersloth LLC, Town Of Host, Town Of Host: The Other Roles, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC. © Innersloth LLC.
 
+## Message to Hosts
+
+When a player leaves the game on the Shhh screen with the message "<player> left the game due to error.", use SHIFT+L+ENTER to force end the game.<br>
+It's very common that players will black screen when even one players disconnects in this way.<br>
+Causes to why players disconnect like this are poor internet and/or bad hardware (common on mobile).<br>
+High ping is another likely cause, try to make sure players have reasonable ping (50 ms to 150 ms), especially for mobile.<br>
+
 DISCORD SERVER: None
 
 ## Releases
