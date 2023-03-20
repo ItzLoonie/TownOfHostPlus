@@ -20,7 +20,7 @@ KNOWN BUGS:
 - Egoist cannot win
 - Manipulator meeting sabotage doesn't clear when sabotage ends
 - Identity Thief bans for hacking.
-- Black screens on consoles when dead affter next meeting when impostors die. Desynced impostor roles can bypass this until they die. (Lag spikes triggered by name changes cause this)
+- Lag spikes on Xbox and Playstation, which cause black screens after meetings when all impostors die/dying as a neutral killing role. Oddly, the Nintendo Switch runs smoothly so it doesn't have this issue.
 - Sometimes players will see some or all players using desynced Impostor roles (known as Impostor Desync)
 - Chat sometimes disappears for the host
 - Sometimes a crewmate win ends in an Impostor win
