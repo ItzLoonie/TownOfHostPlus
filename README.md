@@ -53,8 +53,8 @@ They are marked this way due to a main function not working (eg Werewolf rampage
 - Witch win condition added (Discussions somehow forgot this?)
 
 ### Additions
-- 15 new roles
-- 11 new modifiers, with some originally being roles
+- 17 new roles
+- 12 new modifiers, with some originally being roles
 - Trapster is now a modifier called Sticky
 - Sabotage Master is now a modifier called Quick Fix
 - Setting to disable the task counter for roles with tasks
@@ -588,15 +588,24 @@ Depending on the options, they can call emergency meeting by entering vents.<br>
 ### Sheriff
 
 Team : Crewmates<br>
-Basis : Impostor(Only host is the Crewmate)<br>
+Basis : Impostor<br>
 
-Sheriff can kill imposters always.<br>
+Sheriff can kill impostors always.<br>
 Depending on settings, Sheriff may also kill neutrals.<br>
 The sheriff has no tasks.<br>
 Killing Crewmates will result in suicide. <br>
 
 * As a measure against blackout, after death, the Sheriff can only see the motion of committing suicide at each meeting. There is no corpse. <br>
 
+
+### Deputy
+
+Team : Crewmates<br>
+Basis : Impostor<br>
+
+The Deputy is the Sheriff's partner, and the Sheriff and Deputy know each other.<br>
+Deputy cannot spawn without a Sheriff.<br>
+All Sheriff settings apply to the Deputy<br>
 
 
 ### Snitch
@@ -617,6 +626,16 @@ Team : Crewmates<br>
 Basis : Engineer<br>
 
 Engineer from the base game.<br>
+
+
+### Scientist
+
+Create and idea by Innersloth<br>
+  
+Team : Crewmates<br>
+Basis : Scientist<br>
+
+Scientist from the base game.<br>
 
 ### Spy
 
@@ -743,6 +762,18 @@ Basis : Crewmate<br>
 
 The Ironclad is a crewmate that becomes immortal on task completion.<br>
 Optionally, the Ironclad can see who attacks them.<br>
+
+
+### Marshall
+  
+Create and idea by Loonie<br>
+  
+Team : Crewmates<br>
+Basis : Crewmate<br>
+
+The Marshall is a crewmate that, on task completion, is revealed to all crewmates.<br>
+Impostors and neutrals cannot see the revealed Marshall.<br>
+Optionally, Madmates can see the revealed Marshall.<br>
 
 ## Neutral
 
@@ -1283,10 +1314,10 @@ The Blind is a modifier that sets the vision of the assigned player to 0.1x.
 
 Create and idea by Loonie<br>
   
-Assigned To: Crewmates and Neutrals<br>
+Assigned To: Neutral Killing<br>
 
-The Undercover is a modifier only assigned to crew-aligned and neutral-aligned players.<br>
-As the Undercover, you win with the Impostors.<br>
+The Undercover is a modifier only assigned to neutral killers.<br>
+As an Undercover neutral killer, you win with the Impostors.<br>
 
 ### Insight / Outsight
 
@@ -1314,6 +1345,15 @@ Create and idea by Loonie<br>
 Assigned To: Impostors<br>
 
 The Tethered is a modifier that disables the ability to vent for the assigned impostor.<br>
+
+### Chainlink
+
+Create and idea by Loonie<br>
+  
+Assigned To: All<br>
+
+The Chainlink is a modifier assigned to two players.<br>
+When one player with the modifier dies, the other dies as well.<br>
 
 
 
