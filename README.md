@@ -1,4 +1,4 @@
-# Town Of Host The Other Roles Edited
+# Town Of Host Plus
 
 ## Regarding this mod
 
@@ -69,9 +69,9 @@ They are marked this way due to a main function not working (eg Werewolf rampage
 
 ## Releases
 
-**Latest Version: [Here](https://github.com/SkullCreeper/TOHTOR-Edited/releases/latest)**
+**Latest Version: [Here](https://github.com/SkullCreeper/TownOfHostPlus/releases/latest)**
 
-Old Versions: [Here](https://github.com/SkullCreeper/TOHTOR-Edited/releases)
+Old Versions: [Here](https://github.com/SkullCreeper/TownOfHostPlus/releases)
 
 ## KNOWN BUGS
 
@@ -103,7 +103,7 @@ Unlike mods that use custom servers, there is no need to add servers by editing 
 However, please note that the following restrictions apply.<br>
 
 - If the host changes and does not have this installed, the server isn't modded and is now just a regular Among Us game.<br>
-- If someone will original TOH or TOHTOR, joins a TOHTORE lobby, they will be automatically kicked for a version mismatch.<br>
+- If someone will original TOH or TOHTOR, joins a TOH+ lobby, they will be automatically kicked for a version mismatch.<br>
 
 Note that if a player other than the host plays with this mod installed, the following changes will be made.<br>
 
