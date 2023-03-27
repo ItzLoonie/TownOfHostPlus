@@ -434,6 +434,16 @@ Basis : Impostor<br>
 The Trickster is an Impostor that cannot vent, but appears innocent to Investigator.<br>
 The Sheriff misfires. Snitch cannot find the Trickster.<br>
 
+### Imp
+
+Create and idea by Loonie<br>
+  
+Team : Impostors<br>
+Basis : Impostor<br>
+
+The Imp is an Impostor that appears to be a Child.<br>
+While killing the Child ends the game, killing the Imp does nothing.<br>
+
 ## Madmate
 
 ### Madmate
@@ -488,16 +498,6 @@ Some kind of Shapeshifter-based Impostors can give SidekickMadmate by Shapeshift
 
 **NOTE:**
 - The **"nearest"** Crewmate becomes SidekickMadmate no matter to whom the Impostors Shapeshift.
-
-## Agent
-  
-Create and idea by Loonie<br>
-  
-Team : Impostors<br>
-Basis : Crewmate<br>
-  
-The Agent is a madmate role the Impostors can see.<br>
-Agent is 1 of 2 roles that are known to the Impostors.<br>
   
 ## Saboteur
   
@@ -646,7 +646,6 @@ Basis : Engineer<br>
   
 The Spy is a crewmate role with the vent ability and Impostor vision.<br>
 The catch? Impostors can see them with a red name.<br>
-Spy is 1 of 2 roles that can be seen by the Impostors.<br>
 
 ### SpeedBooster
 
@@ -667,7 +666,7 @@ Original idea by ???<br>
 
 Team & Basis: Crewmates<br>
 
-When the Child dies by any matter, the Child Wins.<br>
+When the Child dies by any matter, everyone loses (including the Child).<br>
 
 
 
