@@ -29,7 +29,7 @@ They are marked this way due to a main function not working (eg Werewolf rampage
 - "Lovers Wins!" is now "Love Couple Wins!"
 - An exclamation mark was added to the end of the role winner text on the end screen
 - Serial Killer rename reverted back to Jackal
-- Impostor, Crewmate, and Jackal end screens now add the word Team to the start of the text
+- Crewmate and Impostor end screens now say "Crewmates Win!" and "Impostors Win!", while the Jackal end screen says "Team Jackal Wins!"
 - Added a space between schrodinger and cat in the role SchrodingerCat.
 - Oblivious now hides the report button for modded players rather than disabling it from lighting up
 - Jester can no longer get the Torch modifier due to it having the option for Impostor vision
@@ -43,7 +43,7 @@ They are marked this way due to a main function not working (eg Werewolf rampage
 - Code that prevents TOHTOR devs from being banned removed
 - Changed the modded options icon to the kill button so it feels more "vanilla"
 - Impostor and madmate color adjusted to match the vanilla color (#ff0000 -> #ff1313)
-- Crewmate roles now use the same color as a normal crewmate (opens up to more colors for neutrals and modifiers)
+- Assassin is now a modifier!
 
 ### Fixes
 - Double cooldown bug fixed
@@ -53,10 +53,11 @@ They are marked this way due to a main function not working (eg Werewolf rampage
 - Witch win condition added (Discussions somehow forgot this?)
 
 ### Additions
-- 17 new roles
-- 12 new modifiers, with some originally being roles
+- New, original roles! (I lost count)
+- New modifiers, mix of original and some originally roles
 - Trapster is now a modifier called Sticky
 - Sabotage Master is now a modifier called Quick Fix
+- Assassin is now a modifier called.. well... Assassin
 - Setting to disable the task counter for roles with tasks
 - Settings to disable the vent cleaning task, the waterwheels task on Polus, and the three waiting tasks (Reboot Wifi, Inspect Sample, and Run Diagnostics)
 - Parasite options for kill cooldown, venting, guessing and additional votes
@@ -433,6 +434,17 @@ Basis : Impostor<br>
 
 The Trickster is an Impostor that cannot vent, but appears innocent to Investigator.<br>
 The Sheriff misfires. Snitch cannot find the Trickster.<br>
+
+### Eradicator
+
+Create and idea by Loonie<br>
+
+Team : Impostors<br>
+Basis : Impostor<br>
+
+The Eradicator is an Impostor that leaves no bodies behind when they kill.<br>
+In addition to this, they have a longer cooldown to help balance the role.<br>
+Whether or not the Eradicator can vent is up to the settings.<br>
 
 ### Imp
 
@@ -1353,6 +1365,23 @@ Assigned To: All<br>
 
 The Chainlink is a modifier assigned to two players.<br>
 When one player with the modifier dies, the other dies as well.<br>
+
+
+### Necroview
+
+Create and idea by Loonie<br>
+
+Assigned to: All but Doctor and Trickster<br>
+
+The Necroview is a modifier that allows the player to see the alignments of dead players.<br>
+
+
+### Assassin
+
+Assigned to: Impostors<br>
+
+The Assassin is a modifier that grants the ability to guess roles in meetings.<br>
+Guessing correctly kills the target, while guessing incorrectly kills you.<br>
 
 
 
