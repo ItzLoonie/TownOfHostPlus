@@ -1,0 +1,701 @@
+using System;
+using BepInEx;
+using AmongUs.GameOptions;
+
+namespace TownOfHost
+{
+    static class CustomRolesHelper
+    {
+        public static bool IsImpostor(this CustomRoles role)
+        {
+            return
+                role is CustomRoles.Impostor or
+                CustomRoles.Shapeshifter or
+                CustomRoles.BountyHunter or
+                CustomRoles.Vampire or
+                CustomRoles.Eradicator or
+                CustomRoles.Vampress or
+                CustomRoles.Trickster or
+                CustomRoles.Wildling or
+                CustomRoles.Escapist or
+                CustomRoles.Spellcaster or
+                CustomRoles.Silencer or
+                CustomRoles.Warlock or
+                CustomRoles.Consort or
+                CustomRoles.Morphling or
+                CustomRoles.Mercenary or
+                CustomRoles.Mare or
+                CustomRoles.ImpostorGhost or
+                CustomRoles.Puppeteer or
+                CustomRoles.TimeThief or
+                CustomRoles.Mafia or
+                CustomRoles.FireWorks or
+                CustomRoles.IdentityTheft or
+                CustomRoles.Bomber or
+                CustomRoles.Manipulator or
+                CustomRoles.Sniper or
+                CustomRoles.Swooper or
+                CustomRoles.Camouflager or
+                CustomRoles.Pickpocket or
+                CustomRoles.YingYanger or
+                CustomRoles.Grenadier or
+                CustomRoles.Freezer or
+                CustomRoles.Imp or
+                CustomRoles.Cleaner or
+                CustomRoles.Miner or
+                CustomRoles.Ninja or
+                CustomRoles.CorruptedSheriff or
+                CustomRoles.Disperser or
+                //      CustomRoles.Assassin or
+                CustomRoles.LastImpostor;
+        }
+        public static bool IsMadmate(this CustomRoles role)
+        {
+            return
+                role is CustomRoles.Madmate or
+                CustomRoles.SKMadmate or
+                 CustomRoles.Consigliere or
+                 CustomRoles.Cultist or
+               CustomRoles.MadGuardian or
+                //        CustomRoles.Agent or
+                CustomRoles.MadSnitch or
+                CustomRoles.Undercover or
+                CustomRoles.Saboteur or
+                CustomRoles.Parasite or
+                CustomRoles.MSchrodingerCat;
+        }
+        public static bool IsImpostorTeam(this CustomRoles role) => role.IsImpostor() || role.IsMadmate() || role == CustomRoles.CrewPostor;
+        public static bool IsNeutral(this CustomRoles role)
+        {
+            return
+                role is CustomRoles.Jester or
+                CustomRoles.Vulture or
+                CustomRoles.Opportunist or
+                CustomRoles.Survivor or
+                CustomRoles.SchrodingerCat or
+                CustomRoles.Terrorist or
+                CustomRoles.Executioner or
+                CustomRoles.Arsonist or
+                CustomRoles.Egoist or
+                CustomRoles.Traitor or
+                CustomRoles.AgiTater or
+                CustomRoles.EgoSchrodingerCat or
+                CustomRoles.Masochist or
+                CustomRoles.Wraith or
+                CustomRoles.Hitman or
+                CustomRoles.CrewPostor or
+                CustomRoles.Glitch or
+                CustomRoles.Marksman or
+                CustomRoles.PoisonMaster or
+                CustomRoles.Pirate or
+                CustomRoles.NeutSerialKiller or
+                CustomRoles.Vindicator or
+                CustomRoles.Jackal or
+                CustomRoles.PlagueBearer or
+                CustomRoles.Pestilence or
+                CustomRoles.TheGlitch or
+                CustomRoles.Mimicker or
+                CustomRoles.Postman or
+                CustomRoles.Werewolf or
+                CustomRoles.Swapper or
+                CustomRoles.GuardianAngelTOU or
+                CustomRoles.Lawyer or
+                CustomRoles.NeutWitch or
+                CustomRoles.Amnesiac or
+                CustomRoles.Juggernaut or
+                CustomRoles.Predator or
+                CustomRoles.Sidekick or
+                CustomRoles.JSchrodingerCat or
+                CustomRoles.Hacker or
+                CustomRoles.Phantom or
+                CustomRoles.BloodKnight or
+                CustomRoles.HASTroll or
+                CustomRoles.Painter or
+                CustomRoles.HASFox or // CAT
+                CustomRoles.BKSchrodingerCat or
+                CustomRoles.CPSchrodingerCat or
+                CustomRoles.JugSchrodingerCat or
+                CustomRoles.MMSchrodingerCat or
+                CustomRoles.PesSchrodingerCat or
+                CustomRoles.WWSchrodingerCat or
+                CustomRoles.TGSchrodingerCat;
+        }
+        public static bool IsNeutralBad(this CustomRoles role)
+        {
+            return
+                role is
+                CustomRoles.Arsonist or
+                CustomRoles.Egoist or
+                CustomRoles.EgoSchrodingerCat or
+                CustomRoles.CrewPostor or
+                CustomRoles.Phantom or
+                CustomRoles.Traitor or
+                CustomRoles.Marksman or
+                CustomRoles.Pirate or
+                CustomRoles.PoisonMaster or
+                CustomRoles.NeutSerialKiller or
+                CustomRoles.Jackal or
+                CustomRoles.Mimicker or
+                CustomRoles.Postman or
+                CustomRoles.Vindicator or
+                 CustomRoles.Masochist or
+               CustomRoles.NeutWitch or
+                CustomRoles.Lawyer or
+                CustomRoles.PlagueBearer or
+                CustomRoles.Pestilence or
+                CustomRoles.TheGlitch or
+                CustomRoles.AgiTater or
+                CustomRoles.Werewolf or
+                CustomRoles.Wraith or
+                CustomRoles.Amnesiac or
+                CustomRoles.Juggernaut or
+                CustomRoles.Glitch or
+                CustomRoles.Predator or
+                CustomRoles.Sidekick or
+                CustomRoles.JSchrodingerCat or
+                CustomRoles.BloodKnight or
+                CustomRoles.HASTroll or
+                CustomRoles.Painter or // CAT
+                CustomRoles.BKSchrodingerCat or
+                CustomRoles.CPSchrodingerCat or
+                CustomRoles.JugSchrodingerCat or
+                CustomRoles.MMSchrodingerCat or
+                CustomRoles.PesSchrodingerCat or
+                CustomRoles.WWSchrodingerCat or
+                CustomRoles.TGSchrodingerCat;
+        }
+        public static bool IsNonNk(this CustomRoles role)
+        {
+            return
+                role is CustomRoles.Jester or
+                CustomRoles.Vulture or
+                CustomRoles.Opportunist or
+                CustomRoles.Survivor or
+                CustomRoles.Predator or
+                CustomRoles.SchrodingerCat or
+                CustomRoles.Masochist or
+                CustomRoles.Terrorist or
+                CustomRoles.Executioner or
+                CustomRoles.EgoSchrodingerCat or
+                CustomRoles.GuardianAngelTOU or
+                CustomRoles.Lawyer or
+                CustomRoles.Amnesiac or
+                CustomRoles.JSchrodingerCat or
+                CustomRoles.Hacker;
+        }
+        public static bool UsesVents(this CustomRoles role)
+        {
+            return
+                role is CustomRoles.Jester or
+                //      CustomRoles.Spy or
+                CustomRoles.Terrorist or
+                CustomRoles.Wisp or
+                CustomRoles.TheGlitch or
+                CustomRoles.Veteran or
+                CustomRoles.GuardianAngelTOU;
+        }
+        public static bool IsNeutralKilling(this CustomRoles role)
+        {
+            return
+                role is CustomRoles.Arsonist or
+                CustomRoles.Egoist or
+                CustomRoles.Jackal or
+                CustomRoles.Wraith or
+                CustomRoles.Glitch or
+                CustomRoles.PlagueBearer or
+                CustomRoles.Pestilence or
+                CustomRoles.CrewPostor or
+                CustomRoles.PoisonMaster or
+                CustomRoles.Sidekick or
+                CustomRoles.Traitor or
+                CustomRoles.Mimicker or
+                CustomRoles.TheGlitch or
+                CustomRoles.NeutSerialKiller or
+                CustomRoles.Vindicator or
+                CustomRoles.AgiTater or
+                CustomRoles.Marksman or
+                CustomRoles.Werewolf or
+                CustomRoles.Pirate or
+                CustomRoles.BloodKnight or
+                CustomRoles.Juggernaut;
+        }
+        public static bool IsEvilCat(this CustomRoles role)
+        {
+            return
+            role is CustomRoles.BKSchrodingerCat or
+                CustomRoles.CPSchrodingerCat or
+                CustomRoles.JugSchrodingerCat or
+                CustomRoles.JSchrodingerCat or
+                CustomRoles.MMSchrodingerCat or
+                CustomRoles.PesSchrodingerCat or
+                CustomRoles.WWSchrodingerCat or
+                CustomRoles.EgoSchrodingerCat or
+                //      CustomRoles.BKSchrodingerCat or
+                CustomRoles.VSchrodingerCat or
+                CustomRoles.SKSchrodingerCat or
+                CustomRoles.TGSchrodingerCat;
+        }
+        public static bool IsJackalTeam(this CustomRoles role)
+        {
+            return
+                role is CustomRoles.Jackal or
+                CustomRoles.JSchrodingerCat or
+                CustomRoles.Sidekick;
+        }
+        public static bool IsSheriffTeam(this CustomRoles role)
+        {
+            return
+                role is CustomRoles.Sheriff or
+                CustomRoles.Deputy;
+        }
+        public static bool IsCrewmate(this CustomRoles role) => !role.IsImpostorTeam() && !role.IsNeutral() && !role.IsCoven();
+        public static bool CanGetCrewModifier(this CustomRoles role) => !role.IsImpostorTeam() && !role.IsNeutralBad() && !role.IsCoven();
+        public static bool CanGetKillerModifier(this CustomRoles role) => role.IsImpostorTeam() && role.IsNeutralKilling() && role.IsCoven() && !role.CannotGetKillerModifier();
+        public static bool CannotGetKillerModifier(this CustomRoles role)
+        {
+            return
+            role is CustomRoles.Mare or
+            CustomRoles.LastImpostor or
+            CustomRoles.CrewPostor or
+            CustomRoles.NeutWitch or
+            CustomRoles.Pirate;
+        }
+        public static bool IsVanilla(this CustomRoles role)
+        {
+            return
+                role is CustomRoles.Crewmate or
+                CustomRoles.Engineer or
+                CustomRoles.Scientist or
+                CustomRoles.GuardianAngel or
+                CustomRoles.Impostor or
+                CustomRoles.Shapeshifter;
+        }
+        public static bool IsLover(this CustomRoles role)
+        {
+            return
+                role is CustomRoles.Lovers or
+                CustomRoles.LoversRecode;
+        }
+
+        public static bool IsCoven(this CustomRoles role)
+        {
+            return
+                role is CustomRoles.Coven or
+                CustomRoles.Poisoner or
+                CustomRoles.HexMaster or
+                CustomRoles.PotionMaster or
+                CustomRoles.CovenWitch or
+                CustomRoles.Medusa or
+                CustomRoles.Mimic or
+                CustomRoles.Conjuror or
+                CustomRoles.Necromancer;
+        }
+        public static bool RoleCannotBeInList(this CustomRoles role)
+        {
+            return
+                role is CustomRoles.Poisoner or
+                CustomRoles.HexMaster or
+                CustomRoles.PotionMaster or
+                CustomRoles.CovenWitch or
+                CustomRoles.Bait or
+                CustomRoles.Bloody or
+                CustomRoles.Guesser or
+                CustomRoles.Assassin or
+                CustomRoles.Eternal or
+                CustomRoles.Overclocked or
+                CustomRoles.Amplify or
+                CustomRoles.Insight or
+                CustomRoles.Outsight or
+                CustomRoles.Bewilder or
+                CustomRoles.Blind or
+                CustomRoles.Flash or
+                CustomRoles.Target or
+                CustomRoles.Lovers or
+                CustomRoles.LoversRecode or
+                CustomRoles.Chainlink or
+                CustomRoles.Sleuth or
+                CustomRoles.Torch or
+                CustomRoles.Medusa or
+                CustomRoles.Mimic or
+                CustomRoles.Conjuror or
+                CustomRoles.Necromancer or
+                CustomRoles.EgoSchrodingerCat or
+                CustomRoles.Impostor or
+                CustomRoles.Phantom or
+                CustomRoles.Crewmate or
+                //       CustomRoles.Engineer or
+                //      CustomRoles.GuardianAngel or
+                CustomRoles.Pestilence or
+                CustomRoles.JSchrodingerCat or
+                CustomRoles.LastImpostor or
+                CustomRoles.CorruptedSheriff or
+                CustomRoles.Sidekick or
+                CustomRoles.Painter or
+                CustomRoles.Janitor or
+                CustomRoles.Painter or
+                CustomRoles.Alturist or
+                //CustomRoles.Miner or
+                CustomRoles.Amnesiac or
+                CustomRoles.CSchrodingerCat or
+                CustomRoles.MSchrodingerCat;
+        }
+        public static RoleType GetRoleType(this CustomRoles role)
+        {
+            RoleType type = RoleType.Crewmate;
+            if (role.IsImpostor()) type = RoleType.Impostor;
+            if (role.IsNeutral()) type = RoleType.Neutral;
+            if (role.IsMadmate()) type = RoleType.Madmate;
+            if (role.IsCoven()) type = RoleType.Coven;
+            if (role.IsEvilCat()) type = RoleType.SchrodingerCat;
+            return type;
+        }
+        public static RoleTeam GetRoleTeam(this CustomRoles role)
+        {
+            RoleTeam type = RoleTeam.None;
+            if (role.IsImpostor()) type = RoleTeam.Evil;
+            if (role.IsNeutralKilling()) type = RoleTeam.Killing;
+            if (role.IsMadmate()) type = RoleTeam.Benign;
+            if (role.IsCoven()) type = RoleTeam.Killing;
+            return type;
+        }
+        public static ModifierType GetModifierType(this CustomRoles role)
+        {
+            if (role < CustomRoles.NoSubRoleAssigned) return ModifierType.RegularRole;
+            if (role == CustomRoles.NoSubRoleAssigned) return ModifierType.None;
+            if (!role.IsModifier()) return ModifierType.None;
+            ModifierType type = ModifierType.Global;
+            if (role.IsCrewModifier()) type = ModifierType.Crew;
+            return type;
+        }
+        public static bool IsCrewModifier(this CustomRoles role)
+        {
+            return
+                role is CustomRoles.Bait or
+                //       CustomRoles.Sticky or
+                CustomRoles.QuickFix or
+                CustomRoles.Insight or
+                CustomRoles.Burst or
+                CustomRoles.Bewilder or
+                CustomRoles.Bloody or
+                CustomRoles.Diseased or
+                CustomRoles.Torch;
+        }
+        public static bool IsKillerModifier(this CustomRoles role)
+        {
+            return
+            role is CustomRoles.Overclocked;
+        }
+        public static bool IsModifier(this CustomRoles role)
+        {
+            return
+                role is CustomRoles.Bait or
+                CustomRoles.Bewilder or
+                CustomRoles.Flash or
+                CustomRoles.Sticky or
+                CustomRoles.Burst or
+                CustomRoles.Tethered or
+                CustomRoles.Bloody or
+                CustomRoles.QuickFix or
+                CustomRoles.Assassin or
+                CustomRoles.Eternal or
+                CustomRoles.Overclocked or
+                CustomRoles.Guesser or
+                CustomRoles.Forensic or
+                CustomRoles.Necroview or
+                CustomRoles.Amplify or
+                CustomRoles.Undercover or
+                CustomRoles.Insight or
+                CustomRoles.Outsight or
+                CustomRoles.Obvious or
+                CustomRoles.Oblivious or
+                CustomRoles.DoubleShot or
+                CustomRoles.Lovers or
+                CustomRoles.Blind or
+                CustomRoles.LoversRecode or
+                CustomRoles.Chainlink or
+                CustomRoles.Diseased or
+                CustomRoles.Watcher or
+                CustomRoles.Sleuth or
+                CustomRoles.Torch or
+                CustomRoles.Converted or
+                CustomRoles.TieBreaker;
+        }
+        public static bool IsDesyncRole(this CustomRoles role)
+        {
+            return
+                role is CustomRoles.Sheriff or
+                CustomRoles.Investigator or
+                CustomRoles.Deputy or
+                CustomRoles.Parasite or
+                CustomRoles.Consigliere or
+                CustomRoles.Escort or
+                CustomRoles.Hitman or
+                 CustomRoles.Cultist or
+                CustomRoles.PoisonMaster or
+                CustomRoles.Saboteur or
+                CustomRoles.Escort or
+                CustomRoles.BloodKnight or
+                CustomRoles.NeutSerialKiller or
+                CustomRoles.Hitman or
+                CustomRoles.Jackal or
+                CustomRoles.Vindicator or
+                CustomRoles.Crusader or
+                CustomRoles.Sidekick or
+                CustomRoles.Arsonist or
+                CustomRoles.Predator or
+                CustomRoles.Egoist or
+                CustomRoles.Mimicker or
+                CustomRoles.Traitor or
+                CustomRoles.Jackal or
+                CustomRoles.PlagueBearer or
+                CustomRoles.Pestilence or
+                CustomRoles.Sidekick or
+                CustomRoles.TheGlitch or
+                CustomRoles.AgiTater or
+                CustomRoles.Marksman or
+                CustomRoles.Werewolf or
+                CustomRoles.BloodKnight or
+                CustomRoles.Juggernaut;
+        }
+        public static bool CanRoleBlock(this CustomRoles role)
+        {
+            return
+                role is CustomRoles.TheGlitch or
+                CustomRoles.Escort or
+                CustomRoles.Consort;
+        }
+        public static bool HostRedName(this CustomRoles role) => /*AmongUsClient.Instance.AmHost && role is CustomRoles.Hitman or CustomRoles.Crusader or CustomRoles.Escort or CustomRoles.NeutWitch;*/ false;
+        public static void SetCount(this CustomRoles role, int num) => Options.SetRoleCount(role, num);
+        public static int GetCount(this CustomRoles role)
+        {
+            /*   if (role.IsVanilla())
+               {
+                   IRoleOptionsCollection roleOpt = GameOptionsManager.Instance.CurrentGameOptions.RoleOptions;
+                   return role switch
+                   {
+                       CustomRoles.Engineer => roleOpt.GetNumPerGame(AmongUs.GameOptions.RoleTypes.Engineer),
+                       CustomRoles.Scientist => roleOpt.GetNumPerGame(AmongUs.GameOptions.RoleTypes.Scientist),
+                       CustomRoles.Shapeshifter => roleOpt.GetNumPerGame(AmongUs.GameOptions.RoleTypes.Shapeshifter),
+                       CustomRoles.GuardianAngel => roleOpt.GetNumPerGame(AmongUs.GameOptions.RoleTypes.GuardianAngel),
+                       CustomRoles.Crewmate => roleOpt.GetNumPerGame(AmongUs.GameOptions.RoleTypes.Crewmate),
+                       _ => 0
+                   };
+               }
+               else */
+            {
+                return Options.GetRoleCount(role);
+            }
+        }
+        public static float GetChance(this CustomRoles role)
+        {
+            /*  if (role.IsVanilla())
+              {
+                  AmongUs.GameOptions.RoleOptionsData roleOpt = null;
+                  return role switch
+                  {
+                      CustomRoles.Engineer => roleOpt.GetChancePerGame(AmongUs.GameOptions.RoleTypes.Engineer),
+                      CustomRoles.Scientist => roleOpt.GetChancePerGame(AmongUs.GameOptions.RoleTypes.Scientist),
+                      CustomRoles.Shapeshifter => roleOpt.GetChancePerGame(AmongUs.GameOptions.RoleTypes.Shapeshifter),
+                      CustomRoles.GuardianAngel => roleOpt.GetChancePerGame(AmongUs.GameOptions.RoleTypes.GuardianAngel),
+                      CustomRoles.Crewmate => roleOpt.GetChancePerGame(AmongUs.GameOptions.RoleTypes.Crewmate),
+                      _ => 0
+                  } / 100f;
+              }
+              else */
+            {
+                return Options.GetRoleChance(role);
+            }
+        }
+        public static bool IsEnable(this CustomRoles role) => role.GetCount() > 0;
+
+        // SPECIFIC ROLE TYPES //
+        public static bool IsShapeShifter(this CustomRoles role)
+        {
+            if (Options.UseVentButtonInsteadOfPet.GetBool() && role == CustomRoles.TheGlitch) return true;
+            if (Options.UseVentButtonInsteadOfPet.GetBool() && role == CustomRoles.Miner) return true;
+            if (Options.UseVentButtonInsteadOfPet.GetBool() && role == CustomRoles.Escapist) return true;
+            return
+                role is CustomRoles.Shapeshifter or
+                CustomRoles.BountyHunter or
+                CustomRoles.Escapist or
+                CustomRoles.Warlock or
+                CustomRoles.Mercenary or
+                CustomRoles.Morphling or
+                CustomRoles.Wildling or
+                CustomRoles.FireWorks or
+                CustomRoles.Sniper or
+                CustomRoles.Consort or
+                //     CustomRoles.Parasite or
+                CustomRoles.Egoist or
+                CustomRoles.Disperser or
+                CustomRoles.Freezer or
+                CustomRoles.Camouflager or
+                CustomRoles.Vampress or
+                CustomRoles.Grenadier or
+                CustomRoles.Ninja or
+                CustomRoles.TheGlitch;
+        }
+        public static bool PetActivatedAbility(this CustomRoles role)
+        {
+            if (Options.UseVentButtonInsteadOfPet.GetBool())
+                return false;
+            return
+                role is CustomRoles.Veteran or
+                CustomRoles.Miner or
+                CustomRoles.Escapist or
+                CustomRoles.TheGlitch or
+                CustomRoles.Transporter;
+        }
+        public static bool IsEngineer(this CustomRoles role)
+        {
+            if (Options.JesterCanVent.GetBool() && role == CustomRoles.Jester) return true;
+            if (Options.VultureCanVent.GetBool() && role == CustomRoles.Vulture) return true;
+            if (Options.MadSnitchCanVent.GetBool() && role == CustomRoles.MadSnitch) return true;
+            if (Options.MayorHasPortableButton.GetBool() && role == CustomRoles.Mayor) return true;
+            if (Options.MediumArrow.GetBool() && role == CustomRoles.Medium) return true;
+            // VENT INSTEAD OF PET
+            if (Options.UseVentButtonInsteadOfPet.GetBool() && role == CustomRoles.Veteran) return true;
+            if (Options.UseVentButtonInsteadOfPet.GetBool() && role == CustomRoles.Transporter) return true;
+            return
+                role is CustomRoles.Engineer or
+                CustomRoles.Survivor or
+                CustomRoles.Madmate or
+                //     CustomRoles.Spy or
+                CustomRoles.Wisp or
+                CustomRoles.Bastion or
+                CustomRoles.Mechanic or
+                CustomRoles.Terrorist or
+                CustomRoles.GuardianAngelTOU;
+        }
+        // CAT STUFF //
+        public static bool IsShieldedRole(this CustomRoles role)
+        {
+            return
+             role is CustomRoles.Arsonist or
+             CustomRoles.Investigator or
+                CustomRoles.Consigliere or
+                 CustomRoles.Cultist or
+             CustomRoles.PlagueBearer or
+             CustomRoles.AgiTater;
+        }
+        // SNITCH STUFF //
+        public static bool CanBeFoundBySnitch(this CustomRoles role)
+        {
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.Jackal) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.Mimicker) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.Sidekick) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.Arsonist) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.PlagueBearer) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.Pestilence) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.BloodKnight) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.Werewolf) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.TheGlitch) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.Juggernaut) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.NeutSerialKiller) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.Vindicator) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.Marksman) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.PoisonMaster) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.CrewPostor) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.Pirate) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.NeutWitch) return true;
+            if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.Glitch) return true;
+            if (Options.SnitchCanFindMadmates.GetBool() && role == CustomRoles.Madmate) return true;
+            if (Options.SnitchCanFindMadmates.GetBool() && role == CustomRoles.MadSnitch) return true;
+            if (Options.SnitchCanFindMadmates.GetBool() && role == CustomRoles.Parasite) return true;
+            if (Options.SnitchCanFindMadmates.GetBool() && role == CustomRoles.MadGuardian) return true;
+            if (Options.SnitchCanFindMadmates.GetBool() && role == CustomRoles.Consigliere) return true;
+            if (Options.SnitchCanFindMadmates.GetBool() && role == CustomRoles.Saboteur) return true;
+            if (Options.SnitchCanFindMadmates.GetBool() && role == CustomRoles.Cultist) return true;
+            //     if (Options.SnitchCanFindMadmates.GetBool() && role == CustomRoles.Agent) return true;
+            //    if (Options.SnitchCanFindNeutralKiller.GetBool() && role == CustomRoles.Wraith) return true;
+
+            return
+                role is CustomRoles.Impostor or
+                CustomRoles.Shapeshifter or
+                CustomRoles.BountyHunter or
+                CustomRoles.Vampire or
+                CustomRoles.Vampress or
+                CustomRoles.Wildling or
+                CustomRoles.Spellcaster or
+                CustomRoles.Silencer or
+                CustomRoles.Eradicator or
+                CustomRoles.Warlock or
+                CustomRoles.Escapist or
+                CustomRoles.Consort or
+                CustomRoles.Morphling or
+            //    CustomRoles.Trickster or
+                CustomRoles.Mercenary or
+                CustomRoles.Mare or
+                CustomRoles.ImpostorGhost or
+                CustomRoles.Puppeteer or
+                CustomRoles.TimeThief or
+                CustomRoles.Mafia or
+                CustomRoles.FireWorks or
+                CustomRoles.IdentityTheft or
+                CustomRoles.Bomber or
+                CustomRoles.Manipulator or
+                CustomRoles.Sniper or
+                CustomRoles.Swooper or
+                CustomRoles.Camouflager or
+                CustomRoles.Pickpocket or
+                CustomRoles.YingYanger or
+                CustomRoles.Grenadier or
+                CustomRoles.Freezer or
+                CustomRoles.Cleaner or
+                CustomRoles.Miner or
+                CustomRoles.Ninja or
+                CustomRoles.CorruptedSheriff or
+                CustomRoles.Disperser or
+                //     CustomRoles.Assassin or
+                //   CustomRoles.Minion or
+                CustomRoles.LastImpostor;
+        }
+        public static bool IsGuesser(this CustomRoles role)
+        {
+            if (role.IsCoven() && role != CustomRoles.Mimic) return true;
+            if (Options.ParasiteCanGuess.GetBool() && role == CustomRoles.Parasite) return true;
+            if (Options.SerialKillerCanGuess.GetBool() && role == CustomRoles.NeutSerialKiller) return true;
+
+            //  return true;
+            return
+             role is CustomRoles.Pirate or
+             //         CustomRoles.NeutSerialKiller or
+             CustomRoles.Vigilante or
+             CustomRoles.Guesser or
+             CustomRoles.Assassin;
+        }
+        // MISC //
+        public static bool RoleGoingInList(this CustomRoles role)
+        {
+            if (!role.IsEnable()) return false;
+            var number = Convert.ToUInt32(PercentageChecker.CheckPercentage(role.ToString(), role: role));
+            bool isRole = UnityEngine.Random.RandomRange(1, 100) <= number;
+            return isRole;
+        }
+    }
+    public enum RoleType
+    {
+        Crewmate,
+        Impostor,
+        Neutral,
+        Madmate,
+        SchrodingerCat,
+        Coven
+    }
+    public enum RoleTeam
+    {
+        None,
+        Evil,
+        Killing,
+        Benign,
+        Support,
+        Protective
+    }
+    public enum ModifierType
+    {
+        RegularRole,
+        None,
+        Crew,
+        Global
+    }
+}
