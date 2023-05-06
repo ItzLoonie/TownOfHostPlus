@@ -649,16 +649,6 @@ Basis : Scientist<br>
 
 Scientist from the base game.<br>
 
-### Spy
-
-Create and idea by Loonie<br>
-  
-Team : Crewmates<br>
-Basis : Engineer<br>
-  
-The Spy is a crewmate role with the vent ability and Impostor vision.<br>
-The catch? Impostors can see them with a red name.<br>
-
 ### SpeedBooster
 
 Create and idea by よっキング<br>
